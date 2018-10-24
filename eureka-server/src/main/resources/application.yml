@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 表明自己是一个服务,不注册自己
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    server:
+      # 服务端维护一个所有服务的列表
+      # 用户下单去服务中心调取注册的服务地址，如果网络有波动可能服务注册不上去
+      # 这个是剔除网络有波动的服务(服务时有时无),下面这个是不剔除服务的意思
+      # 自我保护模式
+      #enable-self-preserveation: false
