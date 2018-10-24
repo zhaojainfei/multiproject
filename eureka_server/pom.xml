@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yushu</groupId>
-	<artifactId>eureka-server</artifactId>
+	<artifactId>eureka_server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>eureka-server</name>
+	<name>eureka_server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -40,22 +40,22 @@
 	</build>
 
 	<profiles>
-		<profile>
-			<id>test</id>
-			<properties>
-				<env>test</env>
-				<war.name>${env}/${project.version}/${project.name}</war.name>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>prod</id>
-			<properties>
-				<env>prod</env>
-				<war.name>${env}/${project.version}/${project.name}</war.name>
-			</properties>
-		</profile>
-	</profiles>
+	<profile>
+		<id>test</id>
+		<properties>
+			<env>test</env>
+			<war.name>${env}/${project.version}/${project.name}</war.name>
+		</properties>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+	</profile>
+	<profile>
+		<id>prod</id>
+		<properties>
+			<env>prod</env>
+			<war.name>${env}/${project.version}/${project.name}</war.name>
+		</properties>
+	</profile>
+</profiles>
 </project>
