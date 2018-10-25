@@ -4,6 +4,7 @@ import com.yushu.model.CardKind;
 import com.yushu.service.CardKindService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,8 +15,12 @@ public class CardKindController {
     @Autowired
     CardKindService cardkindService;
 
+    @Value("${spring.profiles.active}")
+    private String name;
+
     @RequestMapping(value = "/get",method = RequestMethod.GET)
     public Object get(){
+        System.out.println(name);
         CardKind cardKind = new CardKind();
         return cardkindService.getList(cardKind);
     }

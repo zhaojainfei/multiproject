@@ -4,9 +4,11 @@ import com.yushu.mapper.CardMapper;
 import com.yushu.model.Card;
 import com.yushu.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CardServiceImpl implements CardService {
     @Autowired
     CardMapper cardMapper;
