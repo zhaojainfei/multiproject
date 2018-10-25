@@ -15,12 +15,8 @@ public class CardKindController {
     @Autowired
     CardKindService cardkindService;
 
-    @Value("${spring.profiles.active}")
-    private String name;
-
     @RequestMapping(value = "/get",method = RequestMethod.GET)
     public Object get(){
-        System.out.println(name);
         CardKind cardKind = new CardKind();
         return cardkindService.getList(cardKind);
     }

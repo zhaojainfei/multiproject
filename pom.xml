@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yushu.manage</groupId>
-    <artifactId>multi-project</artifactId>
+    <artifactId>multi_project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <!--<module>call_service</module>-->
+        <module>call_service</module>
         <module>eureka_server</module>
         <module>hs_service</module>
-        <!--<module>zuul_service</module>-->
+        <module>zuul_service</module>
     </modules>
 
     <parent>

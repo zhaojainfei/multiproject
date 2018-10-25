@@ -6,14 +6,14 @@
 	<groupId>com.yushu</groupId>
 	<artifactId>hs_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>hs_service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>com.yushu.manage</groupId>
-		<artifactId>multi-project</artifactId>
+		<artifactId>multi_project</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
@@ -63,4 +63,28 @@
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<configuration>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>tk.mybatis</groupId>
+						<artifactId>mapper</artifactId>
+						<version>3.3.9</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 </project>
