@@ -12,7 +12,7 @@
     <modules>
         <module>call_service</module>
         <module>eureka_server</module>
-        <module>hs_service</module>
+        <module>glory_service</module>
         <module>zuul_service</module>
     </modules>
 

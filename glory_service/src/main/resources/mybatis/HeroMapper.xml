@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yushu.mapper.HeroMapper">
+  <resultMap id="BaseResultMap" type="com.yushu.model.Hero">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="hero_id" jdbcType="INTEGER" property="heroId" />
+    <result column="param_name" jdbcType="VARCHAR" property="paramName" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="category" jdbcType="VARCHAR" property="category" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="gold" jdbcType="INTEGER" property="gold" />
+    <result column="diamond" jdbcType="INTEGER" property="diamond" />
+    <result column="ticket" jdbcType="INTEGER" property="ticket" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="ability_hp" jdbcType="INTEGER" property="abilityHp" />
+    <result column="ability_attack" jdbcType="INTEGER" property="abilityAttack" />
+    <result column="ability_skill" jdbcType="INTEGER" property="abilitySkill" />
+    <result column="ability_diff" jdbcType="INTEGER" property="abilityDiff" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+  </resultMap>
+</mapper>
