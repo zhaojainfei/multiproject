@@ -2,7 +2,6 @@ package com.yushu.service.impl;
 
 import com.yushu.mapper.HeroMapper;
 import com.yushu.model.Hero;
-import com.yushu.service.CardKindService;
 import com.yushu.service.HeroService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
