@@ -25,7 +25,6 @@ public class HeroController {
 
     @RequestMapping(value = "/get",method = RequestMethod.GET)
     public Object get(){
-        logger.info(env + " " + branch);
         logger.info("service调用方法 - /glory/hero/get");
         Hero hero = new Hero();
         return heroService.getList(hero);
@@ -33,6 +32,7 @@ public class HeroController {
 
     @RequestMapping(value = "/getById",method = RequestMethod.GET)
     public Object getById(Integer id){
+        logger.info(env + " " + branch);
         logger.info("service调用方法 - /glory/hero/getById");
         Hero hero = new Hero();
         hero.setId(id);
