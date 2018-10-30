@@ -16,9 +16,10 @@ public class ConfigServerApplication {
 /*
 config server 使用教程
 1.添加@EnableConfigServer
-config server去拉取git上面所有的配置文件
+  		config server去拉取git上面所有的配置文件
+  		修改application.properties为bootstrap
 2.访问方式:
 		/{label}/{name}-{profiles}.yml 后缀可以随便访问
 		http://localhost:8990/master/product-service-prod.properties
-		master为分支名,product-service-prod.properties为文件名
+		master为分支名,product-service为项目名，-prod.properties为profile
 */

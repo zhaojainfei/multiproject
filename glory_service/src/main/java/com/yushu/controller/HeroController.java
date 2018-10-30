@@ -6,20 +6,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/glory/hero")
+// 自动读取刷新的配置文件
+// @RefreshScope
 public class HeroController {
     private static final Logger logger = LoggerFactory.getLogger(HeroController.class);
-
-    @Value("${env}")
-    private String env;
-    @Value("${branch}")
-    private String branch;
-
     @Autowired
     HeroService heroService;
 
@@ -32,7 +30,6 @@ public class HeroController {
 
     @RequestMapping(value = "/getById",method = RequestMethod.GET)
     public Object getById(Integer id){
-        logger.info(env + " " + branch);
         logger.info("service调用方法 - /glory/hero/getById");
         Hero hero = new Hero();
         hero.setId(id);
