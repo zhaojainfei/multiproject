@@ -15,6 +15,7 @@
         <module>glory_service</module>
         <module>zuul_service</module>
         <module>config_server</module>
+        <module>common</module>
     </modules>
 
     <parent>
